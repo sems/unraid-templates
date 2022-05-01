@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>satisfactory-server</Name>
+  <Repository>wolveix/satisfactory-server</Repository>
+  <Registry>https://hub.docker.com/r/wolveix/satisfactory-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/sems/unraid-templates/discussions</Support>
+  <Project>https://hub.docker.com/r/wolveix/satisfactory-server</Project>
+  <Overview>This is a Dockerized version of the Satisfactory dedicated server.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://img2.storyblok.com/fit-in/0x200/filters:format(webp)/f/110098/268x268/d1ebbafe03/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1651436048</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a Dockerized version of the Satisfactory dedicated server.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>15000</HostPort>
+        <ContainerPort>15000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>15777</HostPort>
+        <ContainerPort>15777</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unraid-satisfactory-server</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>4</Value>
+      <Name>MAXPLAYERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>STEAMBETA</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="MAXPLAYERS" Target="MAXPLAYERS" Default="4" Mode="" Description="Set the player limit for your server.&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">4</Config>
+  <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Set the group ID of the user the server will run as&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Set the user ID of the user the server will run as&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Steam beta" Target="STEAMBETA" Default="false" Mode="" Description="Set experimental game version" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Config path" Target="/config" Default="/mnt/user/appdata/satisfactory-customer" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/unraid-satisfactory-server</Config>
+  <Config Name="Game port" Target="7777" Default="7777" Mode="udp" Description="Set the game's port&#13;&#10;" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="Beacon port" Target="15000" Default="15000" Mode="udp" Description="Set the game's beacon port" Type="Port" Display="always" Required="false" Mask="false">15000</Config>
+  <Config Name="Query port" Target="15777" Default="15777" Mode="udp" Description="Set the game's query port" Type="Port" Display="always" Required="false" Mask="false">15777</Config>
+</Container>
