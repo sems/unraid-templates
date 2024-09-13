@@ -3,7 +3,7 @@
   <Name>satisfactory-server</Name>
   <Repository>wolveix/satisfactory-server</Repository>
   <Registry>https://hub.docker.com/r/wolveix/satisfactory-server</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
