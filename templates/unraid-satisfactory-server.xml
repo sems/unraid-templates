@@ -27,7 +27,9 @@
   <Config Name="Config path" Target="/config" Default="/mnt/user/appdata/satisfactory-customer" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/unraid-satisfactory-server</Config>
   <Config Name="Game port" Target="7777" Default="7777" Mode="udp" Description="Set the game's port&#13;&#10;" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
   <Config Name="Game port" Target="7777" Default="7777" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="Game port" Target="8888" Default="8888" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
   <Config Name="Memory" Target="memory" Default="6G" Mode="" Description="Recent updates consume 4GB - 6GB RAM, but the official wiki recommends allocating 12GB - 16GB RAM.&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">6G</Config>
   <Config Name="Memory Reservation" Target="memory-reservation" Default="4G" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="AUTOPAUSE" Target="AUTOPAUSE" Default="true" Mode="" Description="Pause game when no player is connected" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
 </Container>
+
